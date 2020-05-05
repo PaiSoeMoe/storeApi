@@ -19,7 +19,7 @@ if (!config.get('jwtPrivateKey')) {
     process.exit(1);
 }
 
-mongoose.connect(config.get("db"))
+mongoose.connect("mongodb+srv://shopping:12341234@cluster0-lyfox.gcp.mongodb.net/test?retryWrites=true&w=majority")
     .then(() => console.log("Mongodb connected"))
     .catch((err) => console.log(err));
 
