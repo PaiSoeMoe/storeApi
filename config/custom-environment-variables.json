@@ -1,3 +1,4 @@
 {
-    "jwtPrivateKey": "pai_jwtPrivateKey"
+    "jwtPrivateKey": "pai_jwtPrivateKey",
+    "db": "shopping_db"
 }

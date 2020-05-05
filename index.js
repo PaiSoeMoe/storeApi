@@ -19,7 +19,7 @@ if (!config.get('jwtPrivateKey')) {
     process.exit(1);
 }
 
-mongoose.connect("mongodb://localhost/shopping")
+mongoose.connect(config.get("db"))
     .then(() => console.log("Mongodb connected"))
     .catch((err) => console.log(err));
 
