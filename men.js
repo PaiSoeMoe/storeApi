@@ -3,10 +3,10 @@ const router = express.Router();
 const product = require('./models/men');
 
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
 
     let cate = req.query.subcategory;
-    console.log(cate);
+
     if (req.query.id !== "undefined") {
         res.send(await product.findById(id));
     }
