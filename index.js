@@ -22,7 +22,7 @@ if (!config.get('jwtPrivateKey')) {
 
 mongoose.connect(config.get("db"))
     .then(() => status = "Mongodb connected")
-    .catch((err) => console.log(err));
+    .catch((err) => status = err);
 
 
 app.use(express.json());
