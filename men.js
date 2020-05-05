@@ -4,7 +4,9 @@ const { Men } = require('./models/men');
 
 
 router.get('/', async (req, res) => {
-    res.send(await Men.find({}));
+    Men.find({}).then((data) => {
+        res.send(data);
+    })
     // let cate = req.query.subcategory;
 
     // if (req.query.id !== "undefined") {
