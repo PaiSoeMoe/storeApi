@@ -38,6 +38,7 @@ app.use('/login', auth);
 
 
 app.get('/', (req, res) => {
+    res.send(process.env.PORT);
 })
 
 
