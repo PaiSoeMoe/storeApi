@@ -3,10 +3,13 @@ const router = express.Router();
 const product = require('./models/men');
 
 
+mongoose.model('haha', haha);
 router.get('/', async (req, res) => {
 
     //let cate = req.query.subcategory;
-    res.send(await product.find({ category: "hoodies-sweatshirts" }));
+    product.find({ category: "hoodies-sweatshirts" }).then((d) => {
+        res.send(d);
+    });
 
     // if (req.query.id !== "undefined") {
     //     res.send(await product.findById(id));
