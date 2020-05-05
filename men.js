@@ -4,9 +4,10 @@ const { Men } = require('./models/men');
 
 
 router.get('/', async (req, res) => {
-    Men.find({}).then((data) => {
-        res.send(data);
-    })
+
+    mongoose.connection.db.listCollections().toArray(function (err, names) {
+        res.send(names)
+    });
     // let cate = req.query.subcategory;
 
     // if (req.query.id !== "undefined") {
