@@ -12,6 +12,7 @@ const auth = require('./auth');
 const newArrival = require('./new-arrival');
 app.use(cors());
 
+var status = "not connected"
 require('./prod')(app);
 
 if (!config.get('jwtPrivateKey')) {
@@ -20,7 +21,7 @@ if (!config.get('jwtPrivateKey')) {
 }
 
 mongoose.connect(config.get("db"))
-    .then(() => console.log("Mongodb connected"))
+    .then(() => status = "Mongodb connected")
     .catch((err) => console.log(err));
 
 
@@ -38,7 +39,7 @@ app.use('/login', auth);
 
 
 app.get('/', (req, res) => {
-    res.send(config.get("db"));
+    res.send(status);
 })
 
 
