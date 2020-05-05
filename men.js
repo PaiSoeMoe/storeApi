@@ -7,7 +7,8 @@ router.get('/', async (req, res) => {
 
     //let cate = req.query.subcategory;
     product.find({ category: "hoodies-sweatshirts" }).then((d) => {
-        res.send(d);
+
+        res.send("hah", d);
     });
 
     // if (req.query.id !== "undefined") {
