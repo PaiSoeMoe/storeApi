@@ -23,4 +23,4 @@ men = new schema({
 
 
 
-exports.Men = mongoose.model('men', men);
+module.exports = mongoose.model('men', men, 'men');
