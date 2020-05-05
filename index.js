@@ -38,7 +38,7 @@ app.use('/login', auth);
 
 
 app.get('/', (req, res) => {
-    res.send("haha");
+    res.send(config.get("db"));
 })
 
 
