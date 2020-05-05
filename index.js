@@ -10,7 +10,7 @@ const shoes = require("./shoes");
 const register = require('./register');
 const auth = require('./auth');
 const newArrival = require('./new-arrival');
-
+app.use(cors());
 
 require('./prod')(app);
 
@@ -23,7 +23,7 @@ mongoose.connect(config.get("db"))
     .then(() => console.log("Mongodb connected"))
     .catch((err) => console.log(err));
 
-app.use(cors());
+
 app.use(express.json());
 app.use('/men', men);
 app.use('/women', women);
