@@ -3,7 +3,7 @@ const router = express.Router();
 const { Men } = require('./models/men');
 
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     res.send(await Men.find({}));
     // let cate = req.query.subcategory;
 
