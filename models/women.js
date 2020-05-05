@@ -16,4 +16,4 @@ women = new schema({
     detail: String
 })
 
-module.exports = mongoose.model('women', women);
+module.exports = mongoose.model('women', women, 'women');
