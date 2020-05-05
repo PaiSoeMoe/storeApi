@@ -6,7 +6,7 @@ const product = require('./models/men');
 router.get('/', async (req, res) => {
 
     //let cate = req.query.subcategory;
-    res.send(await product.find({}));
+    res.send(await product.find({ category: "hoodies-sweatshirts" }));
 
     // if (req.query.id !== "undefined") {
     //     res.send(await product.findById(id));
