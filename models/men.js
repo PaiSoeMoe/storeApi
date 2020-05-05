@@ -17,12 +17,6 @@ men = new schema({
 })
 
 
-const mongoose = require('mongoose');
-
-mongoose.connect("mongodb://localhost/shopping")
-    .then(() => console.log("Mongodb connected"))
-    .catch((err) => console.log(err));
-
 const products = [
     {
         name: "NY Graphic Drawstring Hoodie",
