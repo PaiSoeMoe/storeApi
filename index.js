@@ -12,7 +12,7 @@ const auth = require('./auth');
 const newArrival = require('./new-arrival');
 
 
-
+require('./prod')(app);
 
 if (!config.get('jwtPrivateKey')) {
     console.error("FATAL ERROR: jwtPrivateKey is not defined.");;
