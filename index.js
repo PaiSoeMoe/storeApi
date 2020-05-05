@@ -12,7 +12,7 @@ const auth = require('./auth');
 const newArrival = require('./new-arrival');
 
 
-require('./prod')(app);
+
 
 if (!config.get('jwtPrivateKey')) {
     console.error("FATAL ERROR: jwtPrivateKey is not defined.");;
@@ -38,7 +38,6 @@ app.use('/login', auth);
 
 
 app.get('/', (req, res) => {
-    res.send(products);
 })
 
 
@@ -47,5 +46,5 @@ app.get('/', (req, res) => {
 
 //     res.send(products);
 // })
-
-app.listen(3000, () => { console.log("listening port 3000......") });
+const port = process.env.PORT || 3000;
+app.listen(port, () => { console.log("listening port 3000......") });
