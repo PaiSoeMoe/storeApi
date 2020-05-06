@@ -10,6 +10,7 @@ const shoes = require("./shoes");
 const register = require('./register');
 const auth = require('./auth');
 const newArrival = require('./new-arrival');
+const house = require("./house");
 app.use(cors());
 
 var status = "not connected"
@@ -33,8 +34,7 @@ app.use('/new-arrival', newArrival);
 app.use('/shoes', shoes);
 app.use('/register', register);
 app.use('/login', auth);
-
-
+app.use('/housing', house);
 
 
 
